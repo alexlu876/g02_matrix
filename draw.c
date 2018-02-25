@@ -59,9 +59,9 @@ to the screen
 void draw_lines( struct matrix * points, screen s, color c) {
   int i;
   //scroll through matrix pairwise
-  for(i = 0, i < points->lastcol , i+=2){
+  for(i = 0; i < points->lastcol; i+=2){
     //i guess i just leave out z for now? i'll just do that
-    drawline(points->m[0][i], points->m[1][i], points->m[0][i+1], points->m[1][i+1], s, c);
+    draw_line(points->m[0][i], points->m[1][i], points->m[0][i+1], points->m[1][i+1], s, c);
   }
 }
 
